@@ -18,8 +18,10 @@ namespace addressbook_web_tests
             Assert.AreEqual(s3.Size, 5);
 
             s3.Size = 15;
-            
+
             Assert.AreEqual(s1.Size, 15);
+
+            s2.Colored = true;
 
         }
         [TestMethod]
@@ -36,6 +38,8 @@ namespace addressbook_web_tests
             s3.Radius = 15;
 
             Assert.AreEqual(s1.Radius, 15);
+
+            s2.Colored = true;
 
         }
     }

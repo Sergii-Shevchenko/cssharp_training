@@ -42,7 +42,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountData.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="GroupData.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="UnitTest1.cs" />
@@ -65,6 +67,12 @@
     <PackageReference Include="Selenium.WebDriver">
       <Version>3.141.0</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
