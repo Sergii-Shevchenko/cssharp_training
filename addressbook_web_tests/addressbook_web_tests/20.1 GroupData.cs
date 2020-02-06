@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebAddressbookTests
 {
-    class GroupData
+    public class GroupData
     {
         private string name;
         private string header = "";
@@ -19,7 +19,7 @@ namespace WebAddressbookTests
         public GroupData(string name, string header, string footer)
         {
             this.name = name;
-            this.header = header; ;
+            this.header = header;
             this.header = footer;
         }
 
