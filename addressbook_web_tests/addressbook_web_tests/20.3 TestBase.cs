@@ -84,9 +84,9 @@ namespace WebAddressbookTests
         {
             driver.FindElement(By.LinkText("Logout")).Click();
         }
-        protected void SelectGroup()
+        protected void SelectGroup(int index)
         {
-            driver.FindElement(By.XPath("(//input[@name='selected[]'])[1]")).Click();
+            driver.FindElement(By.XPath("(//input[@name='selected[]'])["+ index +"]")).Click();
         }
 
         protected void RemoveGroup()

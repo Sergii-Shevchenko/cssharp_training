@@ -42,12 +42,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="30. GroupCreationTests - Copy.cs" />
+    <Compile Include="90. GroupCreationTests - Copy.cs" />
     <Compile Include="20.2 AccountData.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="20.1 GroupData.cs" />
     <Compile Include="20.3 TestBase.cs" />
     <Compile Include="Figure.cs" />
+    <Compile Include="30.10 LoginHelper.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
