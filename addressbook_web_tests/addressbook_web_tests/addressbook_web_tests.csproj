@@ -49,6 +49,7 @@
     <Compile Include="20.3 TestBase.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="30.10 LoginHelper.cs" />
+    <Compile Include="30.20 NavigationHelper.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

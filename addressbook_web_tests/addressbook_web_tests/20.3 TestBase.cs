@@ -16,12 +16,17 @@ namespace WebAddressbookTests
         private StringBuilder verificationErrors;
         protected string baseURL;
 
+        protected LoginHelper loginHelper;
+        protected NavigationHelper navigator;
+
         [SetUp]
         public void SetupTest()
         {
             driver = new ChromeDriver();
             baseURL = "http://localhost/";
             verificationErrors = new StringBuilder();
+            loginHelper = new LoginHelper(driver);
+            navigator = new NavigationHelper(driver, baseURL);
         }
 
 
@@ -39,25 +44,6 @@ namespace WebAddressbookTests
             Assert.AreEqual("", verificationErrors.ToString());
         }
 
-        protected void GoToHomePage()
-        {
-            driver.Navigate().GoToUrl(baseURL + "addressbook/group.php");
-        }
-        protected void Login(AccountData account)
-        {
-            driver.FindElement(By.Name("user")).Click();
-            driver.FindElement(By.Name("user")).Click();
-            driver.FindElement(By.Name("user")).Clear();
-            driver.FindElement(By.Name("user")).SendKeys(account.Username);
-            driver.FindElement(By.Name("pass")).Click();
-            driver.FindElement(By.Name("pass")).Clear();
-            driver.FindElement(By.Name("pass")).SendKeys(account.Password);
-            driver.FindElement(By.XPath("//input[@value='Login']")).Click();
-        }
-        protected void GoToGroupsPage()
-        {
-            driver.FindElement(By.LinkText("groups")).Click();
-        }
         protected void InitGroupCreation()
         {
             driver.FindElement(By.Name("new")).Click();

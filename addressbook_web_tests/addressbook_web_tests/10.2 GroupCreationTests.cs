@@ -13,9 +13,9 @@ namespace WebAddressbookTests
         [Test]
         public void GroupCreationTest()
         {
-            GoToHomePage();
-            Login(new AccountData("admin", "secret"));
-            GoToGroupsPage();
+            navigator.GoToHomePage();
+            loginHelper.Login(new AccountData("admin", "secret"));
+            navigator.GoToGroupsPage();
             InitGroupCreation();
             GroupData group = new GroupData("aaa");
             group.Header = "ddd";
@@ -27,3 +27,4 @@ namespace WebAddressbookTests
 
     }
 }
+   
