@@ -18,6 +18,7 @@ namespace WebAddressbookTests
 
         protected LoginHelper loginHelper;
         protected NavigationHelper navigator;
+        public GroupHelper groupHelper;
 
         [SetUp]
         public void SetupTest()
@@ -27,8 +28,8 @@ namespace WebAddressbookTests
             verificationErrors = new StringBuilder();
             loginHelper = new LoginHelper(driver);
             navigator = new NavigationHelper(driver, baseURL);
+            groupHelper = new GroupHelper(driver);
         }
-
 
         [TearDown]
         public void TeardownTest()
@@ -42,42 +43,8 @@ namespace WebAddressbookTests
                 // Ignore errors if unable to close the browser
             }
             Assert.AreEqual("", verificationErrors.ToString());
-        }
 
-        protected void InitGroupCreation()
-        {
-            driver.FindElement(By.Name("new")).Click();
-        }
-        protected void FillGroupForm(GroupData group)
-        {
-            driver.FindElement(By.Name("group_name")).Click();
-            driver.FindElement(By.Name("group_name")).Clear();
-            driver.FindElement(By.Name("group_name")).SendKeys(group.Name);
-            driver.FindElement(By.Name("group_header")).Click();
-            driver.FindElement(By.Name("group_header")).Clear();
-            driver.FindElement(By.Name("group_header")).SendKeys(group.Header);
-            driver.FindElement(By.Name("group_footer")).Click();
-            driver.FindElement(By.Name("group_footer")).Clear();
-            driver.FindElement(By.Name("group_footer")).SendKeys(group.Footer);
-        }
-        protected void SubmitGroupCReation()
-        {
-            driver.FindElement(By.Name("submit")).Click();
-            driver.FindElement(By.LinkText("group page")).Click();
-        }
 
-        protected void ReturnToGroupsPage()
-        {
-            driver.FindElement(By.LinkText("Logout")).Click();
-        }
-        protected void SelectGroup(int index)
-        {
-            driver.FindElement(By.XPath("(//input[@name='selected[]'])["+ index +"]")).Click();
-        }
-
-        protected void RemoveGroup()
-        {
-            driver.FindElement(By.Name("delete")).Click();
         }
     }
 }
