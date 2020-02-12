@@ -9,22 +9,27 @@ namespace WebAddressbookTests
     [TestFixture]
     public class GroupCreationTests : TestBase
     {
-        
+
         [Test]
         public void GroupCreationTest()
         {
-            navigator.GoToHomePage();
-            loginHelper.Login(new AccountData("admin", "secret"));
-            navigator.GoToGroupsPage();
-            groupHelper.InitGroupCreation();
+            
             GroupData group = new GroupData("aaa");
             group.Header = "ddd";
             group.Footer = "fff";
-            groupHelper.FillGroupForm(group);
-            groupHelper.SubmitGroupCReation();
-            groupHelper.ReturnToGroupsPage();
+
+            app.Groups.Create(group);
         }
 
+        [Test]
+        public void EmptyGroupCreationTest()
+        {
+            GroupData group = new GroupData("");
+            group.Header = "";
+            group.Footer = "";
+
+            app.Groups.Create(group);
+        }
     }
 }
    

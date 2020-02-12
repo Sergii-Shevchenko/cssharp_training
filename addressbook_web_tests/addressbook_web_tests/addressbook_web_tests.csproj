@@ -42,16 +42,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="30.30 GroupHelper.cs" />
-    <Compile Include="20.2 AccountData.cs" />
-    <Compile Include="20.1 GroupData.cs" />
-    <Compile Include="20.3 TestBase.cs" />
-    <Compile Include="30.10 LoginHelper.cs" />
-    <Compile Include="30.20 NavigationHelper.cs" />
-    <Compile Include="40.10 HelperBase.cs" />
+    <Compile Include="appmanager\30.30 GroupHelper.cs" />
+    <Compile Include="model\20.2 AccountData.cs" />
+    <Compile Include="model\20.1 GroupData.cs" />
+    <Compile Include="tests\20.3 TestBase.cs" />
+    <Compile Include="appmanager\30.10 LoginHelper.cs" />
+    <Compile Include="appmanager\30.20 NavigationHelper.cs" />
+    <Compile Include="appmanager\40.10 HelperBase.cs" />
+    <Compile Include="appmanager\50.10 ApplicationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="10.1. GroupRemovalTests.cs" />
-    <Compile Include="10.2 GroupCreationTests.cs" />
+    <Compile Include="tests\10.2. GroupRemovalTests.cs" />
+    <Compile Include="tests\10.1 GroupCreationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MSTest.TestAdapter">
