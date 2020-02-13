@@ -45,6 +45,7 @@
     <Compile Include="appmanager\30.30 GroupHelper.cs" />
     <Compile Include="model\20.2 AccountData.cs" />
     <Compile Include="model\20.1 GroupData.cs" />
+    <Compile Include="tests\10.3 GroupModificationTests.cs" />
     <Compile Include="tests\20.3 TestBase.cs" />
     <Compile Include="appmanager\30.10 LoginHelper.cs" />
     <Compile Include="appmanager\30.20 NavigationHelper.cs" />
